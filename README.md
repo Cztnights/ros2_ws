@@ -68,3 +68,21 @@ The environment is pre-configured with the following settings in your .bashrc:
 *   **GUI Tools**: To run Gazebo or Rviz2, simply type the command in the terminal. The display is redirected to your host machine via the DISPLAY environment variable.
     
 *   **Permissions**: If you need to install extra software, use sudo apt update. The student user has passwordless sudo access.
+
+
+
+
+
+
+
+
+*   **MAPPING**
+
+To run the mapping process, you first need access to this repository.
+Then you need to enter into docker from a terminal.
+You will need 3 total docker terminals, where you need to run these following 3 commands:
+* **1** ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
+* **2** ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
+
+* **3** ros2 run my_robot_controller mapping

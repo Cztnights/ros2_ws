@@ -11,7 +11,9 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', glob('launch/*.launch.py'))
+        ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
+        ('share/' + package_name + '/worlds', glob('worlds/*.world')),
+        ('share/' + package_name + '/map', glob('map/*'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -29,6 +31,7 @@ setup(
         'test_node = my_robot_controller.my_first_node:main',
         'move_circle = my_robot_controller.draw_circle:main',
         'turtle_controller = my_robot_controller.turtle_controller:main',
+        "mapping = my_robot_controller.mapping:main",
         ],
     },
 )

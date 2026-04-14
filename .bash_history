@@ -58,3 +58,43 @@ ros2 run my_robot_controller  move_circle
 ros2 run my_robot_controller turtle_controller 
 clear
 . build_ws.sh 
+./build_ws.sh 
+exit
+. build_ws.sh 
+ros2 launch my_robot_controller turtlebot3_world.launch.py 
+. build_ws.sh 
+ros2 launch my_robot_controller turtlebot3_world.launch.py 
+. build_ws.sh 
+gazebo
+. build_ws.sh 
+exit
+. build_ws.sh 
+. build
+. build_ws.sh 
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+ros2 launch my_robot_controller turtlebot3_world.launch.py
+gazebo
+. build_ws.sh 
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=$HOME/map.yaml
+. build_ws.sh 
+gazebo
+sudo gazebo
+. build_ws.sh 
+ros2 launch turtlebot3_world.launch.py
+ros2 run nav2_map_server map_saver_cli -f ~/ws/my_robot_controller/maps/my_map
+ls
+cd src
+ls
+cd .
+cd ..
+ros2 run nav2_map_server map_saver_cli -f ~/ws/src/my_robot_controller/maps/my_map
+ls
+cd src
+ls
+cd my_robot_controller
+ls
+cd ...
+cd ..
+ros2 run nav2_map_server map_saver_cli -f ~/ws/src/my_robot_controller/map
+ros2 run nav2_map_server map_saver_cli -f ~/ws/src/my_robot_controller/map/mymap
+exit

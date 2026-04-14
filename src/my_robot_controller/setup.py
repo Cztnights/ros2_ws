@@ -13,7 +13,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
         ('share/' + package_name + '/worlds', glob('worlds/*.world')),
-        ('share/' + package_name + '/map', glob('map/*'))
+        ('share/' + package_name + '/maps', glob('maps/*'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -32,6 +32,7 @@ setup(
         'move_circle = my_robot_controller.draw_circle:main',
         'turtle_controller = my_robot_controller.turtle_controller:main',
         "mapping = my_robot_controller.mapping:main",
+        'navigation = my_robot_controller.navigation:main',
         ],
     },
 )

@@ -156,3 +156,71 @@ ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:
 exit
 . build_ws.sh 
 exit
+. build_ws.sh 
+colcon build
+exit
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+. build_ws.sh 
+ros2 launch my_robot_controller run_navigation.launch.py
+ros2 topic echo /clicked_point 
+exit
+. build_ws.sh 
+source install/setup.bash
+ros2 launch my_robot_controller  run_navigation.launch.py 
+. build_ws.sh 
+ros2 launch my_robot_controller  run_navigation.launch.py 
+ros2 topic list
+[200~killall -9 ros2~
+killall -9 ros2
+ps aux | grep ros2
+kill -9 15525
+kill -9 16276
+ps aux | grep ros2
+rm -rf /dev/shm/fastdds*
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+source install/setup.bash
+. build_ws.sh 
+ros2 run my_robot_controller run_navigation.launch.py
+sudo rm -rf log build install
+cd
+rm -rf ~/ws/build ~/ws/install ~/ws/log
+sudo rm -rf ~/ws/build ~/ws/install ~/ws/log
+cd ws
+kill <PID>
+exit
+. build_ws.sh 
+source install/setup.bash
+. build_ws.sh 
+source install/setup.bash
+exit
+. build_ws.sh 
+colcon build
+bash: /home/student/ws/install/setup.bash: No such file or directory
+student@autolab-PC-U22-10:~/ws$ colcon build
+source ~/.bashrc
+sudo rm -rf log install build
+exit
+. build_ws.sh 

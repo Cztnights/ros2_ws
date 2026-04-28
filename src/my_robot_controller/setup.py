@@ -13,7 +13,8 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
         ('share/' + package_name + '/worlds', glob('worlds/*.world')),
-        ('share/' + package_name + '/maps', glob('maps/*'))
+        ('share/' + package_name + '/maps', glob('maps/*')),
+        ('share/' + package_name, ['poses.yaml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -33,6 +34,7 @@ setup(
         'turtle_controller = my_robot_controller.turtle_controller:main',
         "mapping = my_robot_controller.mapping:main",
         'navigation = my_robot_controller.navigation:main',
+        'av_nav = my_robot_controller.aw_navigation:main',
         ],
     },
 )

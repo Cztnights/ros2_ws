@@ -127,3 +127,32 @@ ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:
 . build_ws.sh 
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py 
 . build_ws.sh 
+docker images
+docker
+exit
+xhost +local:docker
+docker run -it --rm --privileged --net=host --env=DISPLAY --env=QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix -v /home/autolab/ros2_ws:/ros2_ws -v /home/autolab/autoware_map:/autoware_map --wokdir /ros2_ws
+exit
+ros2 launch my_robot_controller run_navigation.launch.py
+ls
+exit
+. build_ws.sh 
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+. build_ws.sh 
+ls
+rm -rf log
+sudo rm -rf log
+exit
+. build_ws.sh 
+mkdir -p src
+ls
+rm -rf build install log
+sudo rm -rf build install log
+colcon build
+. build_ws.sh 
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py 
+exit
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=$HOME/ws/src/my_robot_controller/maps/map.yaml
+exit
+. build_ws.sh 
+exit
